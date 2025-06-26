@@ -1,12 +1,46 @@
-# React + Vite
+# 🔐 AuthApp – React Authentication Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive authentication dashboard built using **React**, **Vite**, **Tailwind CSS**, **Context API**, and **React Router**. It includes login, signup, protected routes, localStorage persistence, and toast notifications for user feedback.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Welcome screen with "Get Started" button
+- ✅ Signup with **name, email, password**
+- ✅ Login with email (validates user)
+- ✅ Protected dashboard route
+- ✅ Logout functionality
+- ✅ Context API for auth state
+- ✅ localStorage for session persistence
+- ✅ `react-hot-toast` for instant feedback
+- ✅ Clean and responsive Tailwind UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React** + **Vite**
+- **Tailwind CSS**
+- **React Router DOM**
+- **React Context API**
+- **React Hot Toast**
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/authapp.git
+cd authapp
+npm install
+npm run dev
+
+---
+
+### 🛠️ Customize
+Make sure to:
+- Replace `your-username` and `your links`
+- Update the **live site** URL if deployed on Vercel/Netlify
+
+Would you like a badge section (like Netlify deployed badge / GitHub stars / Tech used)? I can add that too!
