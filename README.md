@@ -38,9 +38,4 @@ npm run dev
 
 ---
 
-### 🛠️ Customize
-Make sure to:
-- Replace `your-username` and `your links`
-- Update the **live site** URL if deployed on Vercel/Netlify
 
-Would you like a badge section (like Netlify deployed badge / GitHub stars / Tech used)? I can add that too!
