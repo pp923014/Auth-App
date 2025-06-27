@@ -31,11 +31,10 @@ A modern, responsive authentication dashboard built using **React**, **Vite**, *
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/authapp.git
-cd authapp
+git clone https://github.com/pp923014/Auth-App
+cd FRONTEND AUTH APP
 npm install
 npm run dev
-
 ---
 
 
