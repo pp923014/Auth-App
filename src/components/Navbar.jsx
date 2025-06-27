@@ -19,7 +19,7 @@ export default function Navbar() {
       <div>
         {user ? (
           <>
-            <span className="mr-4 text-gray-700">Hi, {user.email}</span>
+            {/* <span className="mr-4 text-gray-700">Hi, {user.email}</span> */}
             <button
               onClick={handleLogout}
               className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition"
