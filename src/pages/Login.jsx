@@ -22,7 +22,7 @@ export default function Login() {
       return setError("Invalid email address.");
     }
 
-    login(email);
+    login(email,password);
 
     if (!rememberMe) {
       window.addEventListener("beforeunload", () => {

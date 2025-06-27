@@ -9,34 +9,41 @@ export const AuthProvider = ({ children }) => {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  const signup = (email) => {
-    const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+  const signup = (email, password) => {
+  const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
 
-    if (users.find((u) => u.email === email)) {
-      toast.error("User already exists!");
-      return;
-    }
+  if (users.find((u) => u.email === email)) {
+    toast.error("User already exists!");
+    return;
+  }
 
-    users.push({ email });
-    localStorage.setItem("registeredUsers", JSON.stringify(users));
-    setUser({ email });
-    localStorage.setItem("authUser", JSON.stringify({ email }));
-    toast.success("Account created successfully!");
-  };
+  users.push({ email, password });
+  localStorage.setItem("registeredUsers", JSON.stringify(users));
+  setUser({ email });
+  localStorage.setItem("authUser", JSON.stringify({ email }));
+  toast.success("Account created successfully!");
+};
 
-  const login = (email) => {
-    const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+  const login = (email, password) => {
+  const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
 
-    const existingUser = users.find((u) => u.email === email);
-    if (!existingUser) {
-      toast.error("User not found! Please signup first.");
-      return;
-    }
+  const existingUser = users.find((u) => u.email === email);
 
-    setUser({ email });
-    localStorage.setItem("authUser", JSON.stringify({ email }));
-    toast.success("Logged in successfully!");
-  };
+  if (!existingUser) {
+    toast.error("User not found! Please signup first.");
+    return;
+  }
+
+  if (existingUser.password !== password) {
+    toast.error("Incorrect password!");
+    return;
+  }
+
+  setUser({ email });
+  localStorage.setItem("authUser", JSON.stringify({ email }));
+  toast.success("Logged in successfully!");
+};
+
 
   const logout = () => {
     setUser(null);

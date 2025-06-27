@@ -26,7 +26,7 @@ export default function Signup() {
       return setError("Password must be at least 6 characters.");
     }
 
-    signup(email); // You can enhance this to store `name` too, if needed
+    signup(email,password); 
     navigate("/dashboard");
   };
 
